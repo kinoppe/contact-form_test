@@ -16,9 +16,9 @@
                 <tr class="confirm-table__row">
                     <th class="confirm-table__header">お名前</th>
                     <td class="confirm-table__text">
-                        {{$contact['last']}} {{$contact['first']}}
-                        <input type="hidden" name="last" value="{{$contact['last']}}">
-                        <input type="hidden" name="first" value="{{$contact['first']}}">
+                        {{$contact['last_name']}} {{$contact['first_name']}}
+                        <input type="hidden" name="last_name" value="{{$contact['last_name']}}">
+                        <input type="hidden" name="first_name" value="{{$contact['first_name']}}">
                     </td>
                 </tr>
                 <tr class="confirm-table__row">
@@ -67,15 +67,15 @@
                 <tr class="confirm-table__row">
                     <th class="confirm-table__header">お問い合わせの種類</th>
                     <td class="confirm-table__text">
-                        {{$contact['category']}}
-                        <input type="hidden" name="category" value="{{$contact['category']}}">
+                        {{$contact['category_name']}}
+                        <input type="hidden" name="category_id" value="{{$contact['category_id']}}">
                     </td>
                 </tr>
                 <tr class="confirm-table__row">
                     <th class="confirm-table__header confirm-table__header--textarea">お問い合わせの内容</th>
                     <td class="confirm-table__text">
-                        {{$contact['content']}}
-                        <input type="hidden" name="content" value="{{$contact['content']}}">
+                        {{$contact['detail']}}
+                        <input type="hidden" name="detail" value="{{$contact['detail']}}">
                     </td>
                 </tr>
             </table>
