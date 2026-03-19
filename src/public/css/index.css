@@ -1,0 +1,116 @@
+.contact-form__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+}
+
+.contact-form__heading {
+    color: #82776B;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.form {
+    margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
+    
+}
+
+.form__group {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.form__group-title {
+    width: 30%;
+}
+
+.form__label--item {
+    color: #82776B;
+}
+.form__label--required {
+    color: red;
+}
+
+.form__group-content {
+    width: 70%;
+}
+
+.form__input--text input,
+.form__input--tel input,
+.form__input--select select,
+.form__input--textarea textarea {
+    padding: 10px;
+    border:none;
+    border-radius: 3px;
+    background: #ebebeb;
+    width: 100%;
+}
+
+.form__input--text {
+    display: flex;
+    gap: 20px;
+}
+
+.form__input-name--last,
+.form__input-name--first {
+    width: 50%;
+}
+
+.form__input--tel input {
+    text-align: center;
+}
+
+.form__input--tel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form__input--select select {
+    width: 60%;
+}
+
+.form__input--textarea textarea {
+    height: 120px;
+}
+
+.form__input--radio {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.form__input--radio label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #82776B;
+}
+
+.form__input--radio input {
+    accent-color: #82776B;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.form__button {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.form__button-submit {
+    padding: 5px 30px;
+    color: #fff;
+    background: #82776B;
+    border: none;
+    cursor: pointer;
+}
+
+.form__error {
+    color: #ff0000;
+    margin-top: 5px;
+}
+
