@@ -13,6 +13,7 @@
         <div class="header__inner">
             <a class="header__logo" href="/">FashionablyLate</a>
         </div>
+        @yield('header')
     </header>
 
     <main>
