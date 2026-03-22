@@ -13,7 +13,10 @@
             <a class="header__logo" href="/">FashionablyLate</a>
         </div>
         <div class="logout__link">
-            <a class="logout__button-submit" href="/login">logout</a>
+            <form method="post" action="/logout">
+                @csrf
+                <button class="logout__button-submit">logout</button>
+            </form>
         </div>
     </header>
 

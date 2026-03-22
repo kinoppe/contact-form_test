@@ -39,7 +39,7 @@
         </div>
 
         <div class="admin__pagination">
-            {{ $contacts->links() }}
+            {{ $contacts->links('vendor.pagination.default') }}
         </div>
     </div>
     <div class="admin__table">
@@ -97,42 +97,42 @@
         <div class="modal__body">
             <div class="modal__row">
                 <p class="modal__label">お名前</p>
-                <p id="modal-name"></p>
+                <p class="modal__value" id="modal-name"></p>
             </div>
 
             <div class="modal__row">
                 <p class="modal__label">性別</p>
-                <p id="modal-gender"></p>
+                <p class="modal__value" id="modal-gender"></p>
             </div>
 
             <div class="modal__row">
                 <p class="modal__label">メールアドレス</p>
-                <p id="modal-email"></p>
+                <p class="modal__value" id="modal-email"></p>
             </div>
 
             <div class="modal__row">
                 <p class="modal__label">電話番号</p>
-                <p id="modal-tel"></p>
+                <p class="modal__value" id="modal-tel"></p>
             </div>
 
             <div class="modal__row">
                 <p class="modal__label">住所</p>
-                <p id="modal-address"></p>
+                <p class="modal__value" id="modal-address"></p>
             </div>
 
             <div class="modal__row">
                 <p class="modal__label">建物名</p>
-                <p id="modal-building"></p>
+                <p class="modal__value" id="modal-building"></p>
             </div>
 
             <div class="modal__row">
                 <p class="modal__label">お問い合わせの種類</p>
-                <p id="modal-category"></p>
+                <p class="modal__value" id="modal-category"></p>
             </div>
 
             <div class="modal__row">
                 <p class="modal__label">お問い合わせ内容</p>
-                <p id="modal-detail"></p>
+                <p class="modal__value" id="modal-detail"></p>
             </div>
 
             <form id="modal-delete-form" method="post">

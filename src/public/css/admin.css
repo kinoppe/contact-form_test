@@ -51,7 +51,7 @@
 
 .search-form {
     display: flex;
-    gap: 20px;
+    gap: 22px;
 }
 
 .search-form__input,
@@ -61,6 +61,7 @@
     border: 1px solid #ddd;
     text-align: center;
     background: #eee;
+    color: #82776B;
 }
 
 .search-form__input {
@@ -70,17 +71,17 @@
 .search-form__button {
     background: #82776B;
     color: #fff;
-    padding: 8px 25px;
+    padding: 8px 30px;
     border: none;
     cursor: pointer;
 }
 
 .search-form__reset {
-    display: inline-block;
-    padding: 8px 16px;
     background: #c7b8aa;
-    text-decoration: none;
     color: #fff;
+    padding: 8px 16px;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .admin__item {
@@ -98,28 +99,36 @@
     background: #e6e4e3;
     padding: 8px 16px;
     text-decoration: none;
-    color: #333;
+    color: #82776B;
+}
+
+.admin__pagination {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
 }
 
 .admin__pagination nav {
     display: flex;
-    gap: 5px;
 }
 
 .admin__pagination span,
 .admin__pagination a {
     display: inline-block;
-    padding: 6px 10px;
-    border: 1px solid #ccc;
-    text-decoration: none;
-    color: #8B7969;
+    min-width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border: 1px solid #E0DFDE;
     font-size: 14px;
+    color: #8B7969;
+    text-decoration: none;
 }
 
-.admin__pagination .active span {
-    background: #8B7969;
+.admin__pagination .active {
+    background: #82776B;
     color: #fff;
-    border-color: #8B7969;
+    border-color: #82776B;
 }
 
 /* hover */
@@ -134,13 +143,16 @@ svg.w-5.h-5 {
 
 .admin__table table {
     width: 100%;
+    border: 1px solid #ddd;
     border-collapse: collapse;
 }
 
 .admin__table th,
 .admin__table td {
-    padding: 12px;
+    padding: 10px 30px;
     border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    color: #82776B;
 }
 
 .admin__table th {
@@ -158,47 +170,64 @@ svg.w-5.h-5 {
     background: #eee;
     border: 1px solid #ddd;
     cursor: pointer;
+    color: #82776B;
 }
 
 .modal {
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.1);
     justify-content: center;
     align-items: center;
 }
 
 .modal__content {
     background: #fff;
-    width: 600px;
-    padding: 30px;
-    border-radius: 8px;
+    width:  700px;
+    padding: 50px;
     position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 .modal__close {
     position: absolute;
-    right: 15px;
-    top: 10px;
+    right: 30px;
+    top: 20px;
     cursor: pointer;
     font-size: 20px;
+    color: #82776B;
+    border: 1px solid #82776B;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 27px;
 }
 
 .modal__row {
     display: flex;
     margin-bottom: 15px;
+    color: #82776B;
+    font-size: 14px;
 }
 
 .modal__label {
-    width: 180px;
+    width: 200px;
     font-weight: bold;
 }
 
+.modal__value {
+    flex: 1;
+    word-break: break-word;
+    line-height: 1.6;
+}
+
 .modal__delete {
-    margin-top: 20px;
-    background: red;
+    display: block;
+    margin: 20px auto 0;
+    background: #c40101;
     color: #fff;
-    padding: 10px 20px;
+    padding: 5px 20px;
     border: none;
 }

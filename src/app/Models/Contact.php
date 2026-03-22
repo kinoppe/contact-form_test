@@ -23,7 +23,35 @@ class Contact extends Model
     ];
 
     public function category()
-{
-    return $this->belongsTo(Category::class);
-}
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+    public function scopeSearch($query, $request)
+    {
+        if (!empty($request->keyword)) {
+            $keyword = $request->keyword;
+
+            $query->where(function ($q) use ($keyword) {
+                $q->where('last_name', 'like', "%{$keyword}%")
+                ->orWhere('first_name', 'like', "%{$keyword}%")
+                ->orWhereRaw("CONCAT(last_name, first_name) LIKE ?", ["%{$keyword}%"])
+                ->orWhere('email', 'like', "%{$keyword}%");
+            });
+        }
+
+        if (!empty($request->gender)) {
+            $query->where('gender', $request->gender);
+        }
+
+        if (!empty($request->category_id)) {
+            $query->where('category_id', $request->category_id);
+        }
+
+        if (!empty($request->date)) {
+            $query->whereDate('created_at', $request->date);
+        }
+
+        return $query;
+    }
 }
