@@ -10,7 +10,7 @@
     <div class="contact-form__heading">
         <h2>Contact</h2>
     </div>
-    <form class="form" action="/thanks/confirm" method="post">
+    <form class="form" action="/confirm" method="post">
         @csrf
         <div class="form__group">
             <div class="form__group-title">
@@ -89,21 +89,14 @@
                     <input type="tel" name="tel2" placeholder="1234" value="{{old('tel2',request('tel2'))}}"><span>-</span>
                     <input type="tel" name="tel3" placeholder="5678" value="{{old('tel3',request('tel3'))}}">
                 </div>
-                <div class="form__error">
-                    @error('tel1')
-                    {{$message}}
-                    @enderror
-                </div>
-                <div class="form__error">
-                    @error('tel2')
-                    {{$message}}
-                    @enderror
-                </div>
-                <div class="form__error">
-                    @error('tel3')
-                    {{$message}}
-                    @enderror
-                </div>
+                @foreach (['tel1','tel2','tel3'] as $tel)
+                    @if ($errors->has($tel))
+                        <div class="form__error">
+                            {{ $errors->first($tel) }}
+                        </div>
+                        @break
+                    @endif
+                @endforeach
             </div>
         </div>
 
