@@ -230,4 +230,5 @@ svg.w-5.h-5 {
     color: #fff;
     padding: 5px 20px;
     border: none;
+    cursor: pointer;
 }
