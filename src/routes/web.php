@@ -16,10 +16,8 @@ use App\Http\Controllers\AdminController;
 */
 
 Route::get('/', [ContactController::class,'index']);
-Route::post('//confirm', [ContactController::class,'confirm']);
+Route::post('/confirm', [ContactController::class,'confirm']);
 Route::post('/thanks', [ContactController::class,'store']);
-Route::get('/login', fn() => view('auth.login'))->name('login');
-Route::get('/register', fn() => view('auth.register'))->name('register');
 Route::get('/admin', [AdminController::class, 'index']);
 Route::delete('/admin/delete/{id}', [AdminController::class, 'destroy']);
 Route::get('/admin/export', [AdminController::class, 'export']);

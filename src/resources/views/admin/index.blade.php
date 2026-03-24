@@ -43,7 +43,7 @@
         </div>
     </div>
     <div class="admin__table">
-        <table class="">
+        <table>
             <thead>
                 <tr>
                     <th>お名前</th>
@@ -176,18 +176,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 閉じるボタン
     document.querySelector('.modal__close').addEventListener('click', () => {
         modal.style.display = 'none';
     });
 
-    // 背景クリックでも閉じる
     modal.addEventListener('click', (e) => {
         if (e.target === modal) {
             modal.style.display = 'none';
         }
     });
-
 });
 </script>
 @endsection
